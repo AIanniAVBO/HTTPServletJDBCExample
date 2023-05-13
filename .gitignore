@@ -47,21 +47,3 @@ Thumbs.db
 */target
 /build
 */build
-
-# IntelliJ specific files/directories #
-#######################################
-out
-.idea
-*.ipr
-*.iws
-*.iml
-atlassian-ide-plugin.xml
-
-# Eclipse specific files/directories #
-######################################
-.settings
-.metadata
-
-# NetBeans specific files/directories #
-#######################################
-.nbattrs
