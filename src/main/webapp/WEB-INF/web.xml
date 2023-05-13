@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>DatabaseExample</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <!-- I parametri di contesto possono essere richiesti dalle servlet in fase di init -->
+  <context-param>  
+    <param-name>dbDriver</param-name>  
+    <param-value>org.sqlite.JDBC</param-value>  
+  </context-param>
+  <context-param>  
+    <param-name>dbURL</param-name>  
+    <param-value>jdbc:sqlite:sample.db</param-value>  
+  </context-param>   
+  <context-param>  
+    <param-name>dbUser</param-name>  
+    <param-value></param-value>  
+  </context-param> 
+  <context-param>  
+    <param-name>dbPassword</param-name>  
+    <param-value></param-value>  
+  </context-param>         
+  <servlet>
+    <description></description>
+    <display-name>DBServlet</display-name>
+    <servlet-name>DBServlet</servlet-name>
+    <servlet-class>it.avbo.tpsit.dbexample.DBServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DBServlet</servlet-name>
+    <url-pattern>/DBServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
